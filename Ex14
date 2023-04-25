@@ -1,0 +1,6 @@
+//->Desenvolva um programa console que receba um nome e retorne a contagem de caracteres que esse nome possui.
+
+Console.WriteLine("Entre com o nome: ");
+string nome = Console.ReadLine();
+Console.WriteLine("O nome: " + nome.ToUpper() + " tem: " + nome.ToString().Length);
+Console.WriteLine("------");
