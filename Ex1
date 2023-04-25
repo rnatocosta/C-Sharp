@@ -1,0 +1,5 @@
+Console.WriteLine("------");
+        //->Desenvolve um programa console que mostre uma variavel do tipo inteiro.
+        int inteiro = 1;
+        Console.WriteLine("Numero inteiro é: " + inteiro);
+        Console.WriteLine("------");
