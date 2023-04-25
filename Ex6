@@ -1,0 +1,4 @@
+    // ->Desenvolva um programa console que mostreuma variavel do tipo string
+        string str = " Renato é um programador inicio de carreira";
+        Console.WriteLine(str);
+        Console.WriteLine("------");
