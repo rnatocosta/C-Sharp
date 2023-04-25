@@ -1,0 +1,6 @@
+ //->Dado os valores 4,5 e 8 construa um programa que calcule a media harmonica.
+
+        float m = (1 / 4) + (1 / 5) + (1 / 8);
+        float mediaharm = 0f;
+        mediaharm = 3 / m;
+        Console.WriteLine("A média harmônicia de 4, 5 e 8 é : " + mediaharm);
