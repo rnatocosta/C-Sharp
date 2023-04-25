@@ -1,0 +1,36 @@
+/*
+ * 
+ * ->Aurelio é apaixonado por cozinha e adora pesquisar receitas, 
+ * construa um programa que simule um livro de receitas para aurelio, 
+ * o programa ira receber qual a categoria de receitas que ele vai pesquisar 
+ * e retornar quais são as receitas. 
+
+ Exemplo=> Bolo
+ {
+    ChesseCake
+    Bolo de fuba
+    Bolo de cenoura
+ }
+
+ */
+
+List<String> bolos = new List<String>();
+
+bolos.Add("ChesseCake");
+bolos.Add("Bolo de fuba");
+bolos.Add("Bolo de cenoura");
+
+string fim = "nada";
+
+    Console.WriteLine("Qual categoria você irá pequisar? ");
+    string busca = Console.ReadLine();
+
+if (bolos.Contains(busca))
+{
+    Console.WriteLine("Categoria encontrada!" + busca);
+
+}
+else {
+    Console.WriteLine("Categoria não encontrada!");
+}
+
