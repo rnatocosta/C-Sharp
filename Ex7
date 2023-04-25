@@ -1,0 +1,4 @@
+      //->Desenvolva um programa console que mostre uma variavel do tipo bool
+        bool b = true;
+        Console.WriteLine("O valor booleano é " + b);
+        Console.WriteLine("------");
