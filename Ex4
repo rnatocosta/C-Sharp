@@ -1,0 +1,4 @@
+ // ->Desenvolva um programa console que mostre uma variavel do tipo double
+        double ndouble = 123567d;
+        Console.WriteLine("Número Long é: " + ndouble);
+        Console.WriteLine("------");
