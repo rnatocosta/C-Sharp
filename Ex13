@@ -1,0 +1,43 @@
+       //Desenvolva um programa console que receba o peso, altura e calcule o IMC
+
+        Console.WriteLine("Entre Peso em KG Ex: 1.80 : ");
+        float peso = float.Parse(Console.ReadLine());
+
+        Console.WriteLine("Entre com a altura em kg Ex: 95.5 : ");
+        float altura = float.Parse(Console.ReadLine());
+
+        float calculoIMC = peso / (altura * altura);
+
+        Console.WriteLine("Seu IMC é: " + calculoIMC);
+
+
+        if (calculoIMC < 18.5f)
+        {
+            Console.WriteLine("CUIDADO: Seu peso está abaixo do Normal");
+            Console.WriteLine("------");
+        }
+        if (calculoIMC > 18.5f && calculoIMC <= 24.9f)
+        {
+            Console.WriteLine("Seu peso é Normal");
+            Console.WriteLine("------");
+        }
+        if (calculoIMC >= 25 && calculoIMC <= 29.9f)
+        {
+            Console.WriteLine("CUIDADO: Você está com excesso de Peso");
+            Console.WriteLine("------");
+        }
+        if (calculoIMC >= 30 && calculoIMC <= 34.9f)
+        {
+            Console.WriteLine("CUIDADO: Obsidade classe 1");
+            Console.WriteLine("------");
+        }
+        if (calculoIMC >= 35 && calculoIMC <= 39.9f)
+        {
+            Console.WriteLine("CUIDADO: Obsidade classe 2");
+            Console.WriteLine("------");
+        }
+        if (calculoIMC > 40)
+        {
+            Console.WriteLine("CUIDADO: Obsidade classe 3");
+            Console.WriteLine("------");
+        }
