@@ -1,0 +1,4 @@
+        //->Desenvolva um programa que receba um valor e verifique o quanto esse valor esta distante do valor 10.
+        Console.WriteLine("Entre com o valor : " + dataHjmsm);
+        int numero = int.Parse(Console.ReadLine());
+        Console.WriteLine("A distância é de : " + (numero - 10));
