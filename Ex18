@@ -1,0 +1,4 @@
+       //->Desenvolva um program que receba uma data e identifique qual o dia que foi informada naquela data
+        Console.WriteLine("Entre coma data 01/01/1962");
+        var dataHj5 = DateTime.Parse(Console.ReadLine());
+        Console.WriteLine("O dia informado é: " + dataHj5.Day);
