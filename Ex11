@@ -1,0 +1,9 @@
+// ->Desenvolva um programa console que receba a distancia percorrida e o tempo decorrido e retorne a velocidade media.
+Console.WriteLine("Entre com a distância percorrida: ");
+float distancacia = float.Parse(Console.ReadLine());
+
+Console.WriteLine("Entre com a velocidade percorrida: ");
+float velocidade = float.Parse(Console.ReadLine());
+
+Console.WriteLine("A velocidade média é D/V: " + distancacia / velocidade + " m/s");
+Console.WriteLine("------");
