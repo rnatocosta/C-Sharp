@@ -1,0 +1,15 @@
+    //->Desenvolve um programa console que receba um valor e verifique se ele é impar ou par
+        float nParImpar = 0;
+        Console.WriteLine("Entre com o numero: ");
+        nParImpar = float.Parse(Console.ReadLine());
+
+        if (nParImpar % 2 == 0)
+        {
+            Console.WriteLine("O número " + nParImpar + " é PAR! ");
+            Console.WriteLine("------");
+        }
+        else
+        {
+            Console.WriteLine("O número " + nParImpar + " é IMPAR! ");
+            Console.WriteLine("------");
+        }
