@@ -1,0 +1,4 @@
+    // ->Desenvolva um programa console que mostre uma variavel do tipo char
+        char sexo = 'm';
+        Console.WriteLine("Sexo: " + sexo);
+        Console.WriteLine("------");
