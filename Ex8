@@ -1,0 +1,5 @@
+//->Desenvolva um programa console que mostre uma variavel do tipo DateTime
+var data = DateTime.Now;
+
+Console.WriteLine("A data de hoje é : " + data.Day + "/" + data.Month + "/" + data.Year);
+Console.WriteLine("------");
