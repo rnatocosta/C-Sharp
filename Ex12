@@ -1,0 +1,10 @@
+      //Desenvolva um programa console que receba dois valores inteiros e calcule a media.
+
+        Console.WriteLine("Entre com a nota 1: ");
+        float num1 = float.Parse(Console.ReadLine());
+
+        Console.WriteLine("Entre com a nota 2: ");
+        float num2 = float.Parse(Console.ReadLine());
+
+        Console.WriteLine("A média é: " + (num1 + num2) / 2);
+        Console.WriteLine("------");
