@@ -1,0 +1,47 @@
+        //->Desenvolva um programa que receba uma data e identifique qual o mes que foi informado naquela data.
+
+        Console.WriteLine("Entre com o dia mes e ano ex: 01/01/1962");
+        var dataHj2 = DateTime.Parse(Console.ReadLine());
+
+        switch (dataHj2.Month)
+        {
+            case 01:
+                Console.WriteLine("Mês de Janeiro");
+                break;
+            case 02:
+                Console.WriteLine("Mês de Fevereiro");
+                break;
+            case 03:
+                Console.WriteLine("Mês de Março");
+                break;
+            case 04:
+                Console.WriteLine("Mês de Abril");
+                break;
+            case 05:
+                Console.WriteLine("Mês de Maio");
+                break;
+            case 06:
+                Console.WriteLine("Mês de Junho");
+                break;
+            case 07:
+                Console.WriteLine("Mês de Juho");
+                break;
+            case 08:
+                Console.WriteLine("Mês de Agosto");
+                break;
+            case 09:
+                Console.WriteLine("Mês de Setembro");
+                break;
+            case 10:
+                Console.WriteLine("Mês de Outubro");
+                break;
+            case 11:
+                Console.WriteLine("Mês de Novembro");
+                break;
+            case 12:
+                Console.WriteLine("Mês de Dezembro");
+                break;
+            default:
+                Console.WriteLine("Você deve ter informado a data errada!");
+                break;
+        }
