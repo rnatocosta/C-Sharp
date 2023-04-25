@@ -1,0 +1,4 @@
+      //Desenvolva um programa que receba uma data e identifique qual o ano que foi informado naquela data.
+        Console.WriteLine("Entre coma data 01/01/1962");
+        var dataHj4 = DateTime.Parse(Console.ReadLine());
+        Console.WriteLine("O ano informado é: " + dataHj4.Year);
