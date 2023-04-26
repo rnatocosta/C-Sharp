@@ -1,0 +1,130 @@
+/*
+ * 
+ * ->Roberto adora telefones e gostaria de um programa 
+ * para guardar os seus contatos, construa um programa 
+ * que guarde os contatos de Roberto e permita que ele 
+ * consulte os seus contatos.
+ * */
+using System;
+using System.ComponentModel;
+using System.Linq;
+using System.Xml.Serialization;
+
+List<(string nome, string telefone)> contatos = new List<(string, string)>();
+string op = "nda";
+
+
+while (op != "fechar") {
+    
+
+    Console.WriteLine("(1)Cadastrar, (2)Excluir, (3) Alterar, (4)Visualizar todos");
+    op = Console.ReadLine();
+
+    Console.Clear();
+
+    switch (op) {
+
+        case "1": 
+            {
+                Console.Clear();
+                // Cadastrar:
+                Console.WriteLine("----------- CADASTRAR");
+                Console.WriteLine("Nome:");
+                string nome = Console.ReadLine();
+
+                Console.WriteLine("Telefone:");
+                string telefone = Console.ReadLine();
+
+                contatos.Add((nome, telefone));
+                Console.WriteLine("Contato Adicionado com Sucesso!");
+                contatos.Sort();
+
+                break;
+            }
+        case "2":
+            {
+                Console.Clear();
+
+                // Excluir:
+
+                Console.WriteLine("----------- EXCLUIR");
+                Console.WriteLine("Qual nome deseja excluir?: ");
+                string nomeExcluir = Console.ReadLine();
+
+  
+                foreach (var c in contatos.ToList())
+                {
+                    string telefone = c.telefone.ToString();
+                    if (c.nome.ToString() == nomeExcluir) {
+                        Console.WriteLine("Achou!");
+                        contatos.Remove((nomeExcluir,telefone));
+                        Console.WriteLine("O Contato foi removido com sucesso!");
+                    }
+
+                }
+
+                contatos.Sort();
+
+                break;
+            }
+        case "3":
+            {
+                // Alterar:
+                Console.Clear();
+
+                Console.WriteLine("----------- ALTERAR");
+                Console.WriteLine("Entre com o nome do contato que deseja alterar: ");
+                string nomeAlterar = Console.ReadLine();
+
+                foreach (var c in contatos.ToList())
+                {
+                    string telefone = c.telefone.ToString();
+                    if (c.nome.ToString() == nomeAlterar)
+                    {//achou então:
+                        Console.WriteLine("Entre com o novo nome: ");
+                        string novoNome1 = Console.ReadLine();
+
+                        Console.WriteLine("Entre com o novo Telefone: ");
+                        string telefoneNovo = Console.ReadLine();
+
+                        //removendo o antigo:
+                        contatos.Remove((nomeAlterar, telefone));
+                        //adicionando o novo:
+                        contatos.Add((novoNome1, telefoneNovo));
+                        Console.WriteLine("O Contato foi ALTERADO com sucesso!");
+                    }
+                    else {
+                        Console.WriteLine("Contato não encontrado!");
+                    }
+
+                }
+
+
+                // Ordenou
+                contatos.Sort();
+                
+                break;
+            }
+
+        case "4":
+            {
+                // listar todos os cadastrados:
+                Console.WriteLine("Listando todos os contatos: ");
+
+                foreach (var c in contatos)
+                {
+                    Console.WriteLine(c.nome);
+                    Console.WriteLine(c.telefone);
+                    Console.WriteLine("-----------");
+
+                }
+
+                break;
+            }
+        default:
+            { 
+                break; 
+            }     
+    }
+
+}
