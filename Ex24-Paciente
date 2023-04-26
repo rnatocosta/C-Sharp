@@ -1,0 +1,97 @@
+/*->Adriano estava doente e resolveu ir ao hospital,
+ * quando chegou verificou que seu nome estava sendo chamado em um painel,
+ * Adriano é desenvolvedor e decidiu replicar o sitema de chamado do hospital 
+ * apos chegar em casa. Faça um programa que simule um sistema de chamado de consultas.
+
+Exemplos=> A pessoa escolhe qual é o a categoria da consulta e seu nome é 
+inserido em uma fila de espera.
+*/
+using System;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Xml.Serialization;
+
+List<(string nomePaciente, string categoria)> contatos = new List<(string, string)>();
+string op = "nda";
+
+while (op != "fechar") {
+
+    Console.WriteLine("*************************");
+    Console.WriteLine("(1)Dar entrada na Fila(dar entrada no final da fila)");
+    Console.WriteLine("(2)Chamar Paciênte(remove o primeiro)");
+    Console.WriteLine("(3)Visualizar todos na fila");
+    Console.WriteLine("Para finalizar digite fechar");
+    Console.WriteLine("*************************");
+    op = Console.ReadLine();
+
+    Console.Clear();
+
+    switch (op) {
+
+        case "1": 
+            {
+                Console.Clear();
+                // Cadastrar na fila:
+                Console.WriteLine("----------- Dar entrada na Fila");
+                Console.WriteLine("Nome do Paciênte: ");
+                string nome = Console.ReadLine();
+
+                Console.WriteLine("Qual Categoria?: ");
+                string categoria = Console.ReadLine();
+
+                contatos.Add((nome, categoria));
+                Console.WriteLine("Paciênte adicionado na fila com sucesso!");
+                Console.Clear();
+
+                break;
+            }
+        case "2":
+            {
+                Console.Clear();
+
+                // Excluir do fila fila o ultimo:
+                Console.WriteLine("*********************");
+                Console.WriteLine("----------- Chamando paciênte ");
+                Console.WriteLine("Qual nome deseja chamar?: ");
+                string nomeExcluir = Console.ReadLine();
+
+  
+                foreach (var c in contatos.ToList())
+                {
+                    string categoria = c.categoria.ToString();
+                    if (c.nomePaciente.ToString() == nomeExcluir) {
+                        Console.WriteLine("Achou!");
+                        contatos.Remove((nomeExcluir, categoria));
+                        Console.WriteLine("A fila anda, nome excluído!");
+                    }
+
+                }
+
+                break;
+            }
+     
+
+        case "3":
+            {
+                // listar todos os cadastrados:
+                Console.Clear();
+                Console.WriteLine("Listando os pacientes da fila por ordem de chegada: ");
+
+                foreach (var c in contatos)
+                {
+                    Console.WriteLine(c.nomePaciente);
+                    Console.WriteLine(c.categoria);
+                    Console.WriteLine("-----------");
+
+                }
+
+                break;
+            }
+        default:
+            { 
+                break; 
+            }     
+    }
+
+}
